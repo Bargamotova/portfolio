@@ -1,0 +1,38 @@
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@keyframes roundRun {
+  0% {
+    transform: translate(-45%, -50%) rotate(0deg);
+    border-color: $text;
+  }
+  50% {
+    border-color: $gold;
+  }
+  100% {
+    transform: translate(-45%, -50%) rotate(-359deg);
+    border-color: $text;
+  }
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

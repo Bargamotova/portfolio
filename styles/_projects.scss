@@ -1,0 +1,21 @@
+.projects {
+  @media screen and (max-width: $mobile) {
+    padding-bottom: 150px;
+  }
+  @media screen and (min-width: $desktopMD) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-size: clamp(30px, 5vw + 5vh, 60px);
+    @media screen and (max-width: $mobileSM) {
+      font-size: 50px;
+    }
+  }
+  &__inner {
+    padding: 50px 0;
+  }
+}

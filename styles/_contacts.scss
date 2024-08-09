@@ -1,0 +1,104 @@
+.contact {
+  padding: 160px 0 10px;
+  position: relative;
+  @media screen and (max-width: 600px) {
+    padding: 10px 0 10px;
+  }
+  &__title {
+    position: sticky;
+    bottom: 0;
+    margin: 0;
+    line-height: 1.1;
+    font-family: "Brotherhood";
+    letter-spacing: 0.2em;
+    font-size: 20vmin;
+    color: rgba($bg, 0.1);
+    z-index: -2;
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+  &__inner {
+    position: relative;
+    height: 65dvh;
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: end;
+    @media screen and (max-width: 600px) {
+      display: block;
+      height: unset;
+    }
+  }
+
+  &__content {
+    padding: 10px 0;
+    top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    @media screen and (max-width: 600px) {
+      @include glass(10px);
+      top: -50px;
+    }
+  }
+
+  &__img-box {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%) scale(1.1);
+    overflow: hidden;
+
+    @media screen and (max-width: $mobile) {
+      display: none;
+    }
+  }
+  &__text {
+    text-align: center;
+    margin: 0;
+    text-wrap: pretty;
+    font-size: clamp(30px, 4vw + 4vh, 42px);
+    &--accent {
+      color: $gold;
+    }
+    @media screen and (max-width: $desktopSM) {
+      width: 80vw;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 24px;
+    }
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__email {
+    padding: 10px 20px;
+    width: 20%;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $text;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px rgba($bg-section, 0.5);
+    border: 1px solid $accent;
+    border-radius: 40px;
+    background: $accent;
+    background-image: linear-gradient(90deg, #991c0b, #dc4251, #f69953, #dc4251, #991c0b);
+    background-size: 180% 180%;
+    &:hover {
+      animation: gradient-animation 4s ease infinite;
+    }
+    @media screen and (max-width: 600px) {
+      width: unset;
+    }
+  }
+}

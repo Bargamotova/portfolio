@@ -1,0 +1,64 @@
+.about {
+  display: grid;
+  place-items: center;
+
+  &__content {
+    position: relative;
+    padding: 150px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 10px;
+    border-bottom: 150px dotted rgba($bg-section, 0.3);
+    @media screen and (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      padding: 50px 10px 20px;
+      border-bottom: 50px dotted rgba($bg-section, 0.3);
+    }
+  }
+  &__words {
+    @media screen and (max-width: $tablet) {
+      display: none;
+    }
+  }
+  &__img-box {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 90%;
+    aspect-ratio: 1;
+    margin-right: 10px;
+    border-right: 10px solid $accent;
+    border-left: 10px solid $text;
+  }
+
+  &__desc {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 1em;
+    line-height: 1;
+    position: relative;
+
+    font-size: clamp(30px, 5vw + 5vh, 60px);
+    @media screen and (max-width: $mobileSM) {
+      font-size: 50px;
+    }
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    max-width: 95%;
+    text-wrap: pretty;
+    margin: 0;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    @media screen and (max-width: $tablet) {
+      width: 80vw;
+    }
+  }
+}

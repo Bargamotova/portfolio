@@ -57,6 +57,11 @@
       writing-mode: horizontal-tb;
       width: 100%;
     }
+    &.active {
+      @media screen and (max-width: $desktopSM) {
+        background: linear-gradient(145deg, rgba(33, 180, 229, 0.5490196078), rgb(255 255 255 / 52%));
+      }
+    }
   }
   &__link {
     color: $text;
@@ -69,12 +74,15 @@
     }
   }
   @media screen and (max-width: $mobile) {
-    transform: translateY(-50%) translateX(-100%);
-
+    transform: translateY(-50%) translateX(-105%);
+    pointer-events: none;
+    user-select: none;
     &.open {
       transform: translateY(-50%) translateX(0%);
       transition: transform 0.3s ease-in-out;
       transition-delay: 0.5s;
+      pointer-events: all;
+      user-select: auto;
     }
   }
 }

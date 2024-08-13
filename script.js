@@ -18,13 +18,19 @@ btn.addEventListener('click', function (e) {
 links.forEach((el) => {
   el.addEventListener('click', function (e) {
     const targetId = e.target.innerText.toLowerCase();
-
+    const targetParent = e.target.parentElement;
     btn.classList.toggle('active');
     menu.classList.toggle('open');
     cover.classList.remove('show');
     const targetElement = document.getElementById(targetId);
-    console.log(targetElement)
-    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    linksBtn.forEach((el) => {
+      el.classList.remove('active')
+      targetParent.classList.add('active');
+    })
   })
+
 })
+
 

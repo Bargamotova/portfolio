@@ -300,6 +300,11 @@ img {
     width: 100%;
   }
 }
+@media screen and (max-width: 1200px) {
+  .menu__item.active {
+    background: linear-gradient(145deg, rgba(33, 180, 229, 0.5490196078), rgba(255, 255, 255, 0.52));
+  }
+}
 .menu__link {
   color: #c8dfe6;
   padding: 10px;
@@ -314,12 +319,20 @@ img {
 }
 @media screen and (max-width: 600px) {
   .menu {
-    transform: translateY(-50%) translateX(-100%);
+    transform: translateY(-50%) translateX(-105%);
+    pointer-events: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
   .menu.open {
     transform: translateY(-50%) translateX(0%);
     transition: transform 0.3s ease-in-out;
     transition-delay: 0.5s;
+    pointer-events: all;
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+            user-select: auto;
   }
 }
 
@@ -874,7 +887,7 @@ img {
   border: 1px solid coral;
   border-radius: 40px;
   background: coral;
-  background-image: linear-gradient(90deg, #991c0b, #dc4251, #f69953, #dc4251, #991c0b);
+  background-image: linear-gradient(90deg, rgba(153, 28, 11, 0.6), rgba(220, 66, 81, 0.6), rgba(246, 153, 83, 0.6), rgba(220, 66, 81, 0.6), rgba(153, 28, 11, 0.6));
   background-size: 180% 180%;
 }
 .contact__email:hover {

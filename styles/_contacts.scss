@@ -79,6 +79,9 @@
   }
 
   &__email {
+    $brown: rgba(#991c0b, 0.6);
+    $pink: rgba(#dc4251, 0.6);
+    $orange: rgba(#f69953, 0.6);
     padding: 10px 20px;
     width: 20%;
     text-align: center;
@@ -92,7 +95,7 @@
     border: 1px solid $accent;
     border-radius: 40px;
     background: $accent;
-    background-image: linear-gradient(90deg, #991c0b, #dc4251, #f69953, #dc4251, #991c0b);
+    background-image: linear-gradient(90deg, $brown, $pink, $orange, $pink, $brown);
     background-size: 180% 180%;
     &:hover {
       animation: gradient-animation 4s ease infinite;
